@@ -1,9 +1,10 @@
 import React from 'react';
-import { StyleSheet, Image, View, TouchableOpacity, Alert} from 'react-native';
+import { StyleSheet, Image, View, Alert} from 'react-native';
 
-import Texto from '../../../componentes/Texto' //Componente de Exibição de Texto
+import Texto from '../../../componentes/Texto'
+import Botao from '../../../componentes/Botao'
 
-export default function Detalhes({nome, logo, detalhes, preco}){
+export default function Produto({nome, logo, detalhes, preco, botao}){
     return <View style={styles.produto}>
             <View style={styles.logotipo}>
               <Image source={logo} style={styles.logo} resizeMode='contain'/>
@@ -11,10 +12,8 @@ export default function Detalhes({nome, logo, detalhes, preco}){
             </View>
             <Texto style={styles.descricao}>{detalhes}</Texto>
             <Texto style={styles.preco}>{preco}</Texto>
-            <TouchableOpacity style={styles.botao} onPress={() => {Alert.alert("Lista de Desejos!", "Em breve a funcionalidade da Lista de Desejos estará disponível!")}}>
-              <Texto style={styles.botaoTexto}>Adicionar na Lista de Desejos</Texto>
-            </TouchableOpacity>
-          </View>
+            <Botao textoBotao={botao} acaoBotao={()=>{Alert.alert("Em breve!", "Estamos preparando uma novidade para você.")}}/>
+        </View>
 }
 
 const styles = StyleSheet.create({
@@ -26,8 +25,8 @@ const styles = StyleSheet.create({
       color: "purple",
       fontSize: 26,
       fontWeight: "bold",
-      paddingTop: 25,
-      paddingLeft: 10,
+      paddingTop: 20,
+      paddingLeft: 8,
     },
     descricao: {
       color: "gray",
@@ -40,23 +39,10 @@ const styles = StyleSheet.create({
       marginTop: 8
     },
     logo: {
-      width: 100,
-      height: 100,
+      width: 80,
+      height: 80,
     },
     logotipo: {
       flexDirection: "row",
     },
-    botao: {
-      marginTop: 16,
-      backgroundColor: "purple",
-      paddingVertical: 16,
-      borderRadius: 6,
-    },
-    botaoTexto: {
-      textAlign: "center",
-      color: "#FFFFFF",
-      fontSize: 20,
-      lineHeight: 26,
-      fontWeight: "bold",
-    }
   });

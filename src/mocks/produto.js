@@ -9,6 +9,7 @@ const produto = {
         logo: Logo,
         detalhes: "Um kit com panos de copa feitos a mão com muito carinho para deixar sua cozinha mais bonita!",
         preco: "R$ 50,00",
+        botao: "Adicionar na Lista de Desejos",
     }
 }
 

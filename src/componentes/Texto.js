@@ -1,14 +1,14 @@
 import React from "react";
-import { Text, StyleSheet } from "react-native";
+import {Text, StyleSheet} from "react-native";
 
-export default function Texto ({children, style}) {
+export default function Texto({children, style}){
 
-    //Determina  a estilização padrão do texto
+    //Define a estilização padrão do campo
     let estilo = styles.texto;
 
-    //Se tiver estilização personalizada, verifica se pede texto em negrito
+    //Verifica se deve exibir a fonte em negrito
     if(style?.fontWeight=="bold"){
-        //Pede negrito, direciona estilização
+        //Negrito, muda a estilização
         estilo = styles.textoNegrito;
     }
 
@@ -17,9 +17,10 @@ export default function Texto ({children, style}) {
 
 const styles = StyleSheet.create({
     texto: {
-        fontFamily: "SpaceGroteskRegular",
+        fontFamily: "SpaceGRegular",
     },
-    textoNegrito: {
-        fontFamily: "SpaceGroteskBold",
+    textoNegrito :{
+        fontFamily: "SpaceGBold",
+        fontWeight: "normal",
     }
 })

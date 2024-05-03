@@ -1,6 +1,6 @@
 import Logo from '../../assets/logo.png';
-import passa_fita from '../../assets/produtos/passa_fita.png'
 import fita_cetim from '../../assets/produtos/fita_cetim.png'
+import passa_fita from '../../assets/produtos/passa_fita.png'
 import laise from '../../assets/produtos/laise.png'
 
 const produto = {
@@ -17,21 +17,18 @@ const produto = {
     itens: {
         titulo: "Itens do Kit",
         lista: [
-            {
-                id: 1,
-                nome: "1x Fita de Cetim",
-                imagem: fita_cetim,
-            },
-            {
-                id: 2,
-                nome: "2x Passa Fita",
-                imagem: passa_fita,
-            },
-            {
-                id: 3,
-                nome: "1x Laise",
-                imagem: laise,
-            },
+          {
+            nome: "1x Fita de Cetim",
+            imagem: fita_cetim,
+          },
+          {
+            nome: "2x Passa fita",
+            imagem: passa_fita,
+          },
+          {
+            nome: "1x Laise",
+            imagem: laise,
+          },
         ]
     }
 }
